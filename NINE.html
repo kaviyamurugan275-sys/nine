@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///C:/Users/ABCDEFGHI/Desktop/company.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NINE</title>
+  <!-- Import Montserrat font from Google Fonts -->
+  <link href="./NINE_files/css2" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: #ddd;
+      background: linear-gradient(135deg, #1a004d 0%, #2e0057 100%);
+      min-height: 100vh;
+      font-weight: 300;
+    }
+    a {
+      text-decoration: none;
+      color: #d6a2e8;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ae6ee0;
+      text-shadow: 0 0 8px #ae6ee0;
+    }
+    header {
+      background: #2e0057;
+      color: #e0c3fc;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 0 15px #9b59b6;
+      font-weight: 700;
+    }
+    header h1 {
+      font-size: 2em;
+      letter-spacing: 4px;
+      text-shadow: 0 0 8px #d6a2e8;
+      font-weight: 700;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.8em;
+    }
+    nav a {
+      color: #d6a2e8;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 6px #ae6ee0;
+    }
+    nav a:hover {
+      text-shadow: 0 0 14px #f3e5ff, 0 0 20px #ae6ee0;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=1600&q=80') center center/cover no-repeat fixed;
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #e0c3fc;
+      padding: 6em 2em 5em 2em;
+      box-shadow: inset 0 0 60px #6e2ea1cc;
+      text-shadow: 0 0 10px #cfa0ff;
+      text-align: center;
+      font-weight: 300;
+    }
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 0.7em;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-shadow: 0 0 18px #bc65db, 0 0 30px #d3a0ff;
+    }
+    .hero p {
+      font-size: 1.3em;
+      max-width: 600px;
+      background: rgba(75, 17, 144, 0.6);
+      border-radius: 12px;
+      padding: 0.6em 1.2em;
+      box-shadow: 0 0 18px #bc65dbcc;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+    section {
+      padding: 3em 2em;
+      max-width: 1100px;
+      margin: 2em auto 3em;
+      background: #2e0057;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #9b59b6a0;
+      color: #ddd;
+      font-weight: 300;
+    }
+    .about, .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2em;
+    }
+    .about img, .benefits img {
+      flex: 1 1 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #9b59b6aa;
+      transition: box-shadow 0.3s ease;
+    }
+    .about img:hover, .benefits img:hover {
+      box-shadow: 0 0 40px #d6a2e8ff;
+    }
+    .about div, .benefits div {
+      flex: 2 1 400px;
+    }
+    .about h2, .benefits h2 {
+      color: #d6a2e8;
+      text-shadow: 0 0 8px #ae6ee0;
+      margin-bottom: 0.8em;
+      font-weight: 700;
+    }
+    .about p, .benefits p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #e0c3fc;
+      text-shadow: 0 0 6px #ae6ee0bb;
+      margin-bottom: 1.2em;
+      font-weight: 300;
+    }
+    #services {
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      margin-top: 1em;
+      margin-bottom: 3em;
+    }
+    #services h2 {
+      text-align: center;
+      margin-bottom: 1.2em;
+      color: #d6a2e8;
+      text-shadow: 0 0 12px #bc65db;
+      font-weight: 700;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+    .service-card {
+      background: #3a0462cc;
+      border-radius: 15px;
+      padding: 1.8em 1.2em;
+      flex: 1 1 320px;
+      color: #f0e6ff;
+      box-shadow: 0 0 18px #ae6ee0bb;
+      text-align: center;
+      transition: box-shadow 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      font-weight: 300;
+    }
+    .service-card:hover {
+      box-shadow: 0 0 40px #d6a2e8aa, 0 0 70px #bc65dbcc;
+    }
+    .service-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 20px #ae6ee0cc;
+      transition: box-shadow 0.3s ease;
+    }
+    .service-card img:hover {
+      box-shadow: 0 0 40px #d6a2e8ee;
+    }
+    .service-card h3 {
+      color: #f0e6ff;
+      text-shadow: 0 0 10px #bc65db;
+      font-weight: 700;
+      margin-bottom: 0.4em;
+    }
+    .service-card p {
+      font-size: 1em;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+    .benefits {
+      margin-top: 3em;
+      padding-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      align-items: center;
+      color: #e0c3fc;
+      font-weight: 300;
+    }
+    .benefits img {
+      flex: 1 1 300px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #9b59b6aa;
+      transition: box-shadow 0.3s ease;
+    }
+    .benefits img:hover {
+      box-shadow: 0 0 40px #d6a2e8ff;
+    }
+    .benefits div {
+      flex: 2 1 400px;
+    }
+    .testimonials {
+      background: #3a0462cc;
+      padding: 3em 2em;
+      border-radius: 20px;
+      box-shadow: 0 0 40px #d6a2e8dd;
+      max-width: 900px;
+      margin: 3em auto;
+      color: #f0e6ff;
+      font-weight: 300;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 2em;
+      font-weight: 900;
+      font-size: 2.4em;
+      text-shadow: 0 0 16px #bc65db;
+      letter-spacing: 2px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .testimonial {
+      display: flex;
+      align-items: center;
+      gap: 1.4em;
+      background: rgba(60, 20, 110, 0.8);
+      border-left: 8px solid #ae6ee0;
+      margin: 1.5em 0;
+      padding: 1.7em 2em;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #bc65dbbb;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #ae6ee0aa;
+      flex-shrink: 0;
+    }
+    .testimonial div {
+      flex: 1;
+    }
+    .testimonial p {
+      font-style: italic;
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+    .testimonial span {
+      display: block;
+      margin-top: 0.8em;
+      font-weight: 700;
+      color: #d6a2e8;
+      text-shadow: 0 0 10px #ae6ee0;
+      font-size: 0.95em;
+      letter-spacing: 0.8px;
+    }
+    #team {
+      padding: 3em 2em 2em 2em;
+      background: #3a0462c7;
+      border-radius: 15px;
+      box-shadow: 0 0 22px #ae6ee0cc;
+      margin: 3em auto 5em;
+      max-width: 1100px;
+      color: #f0e6ff;
+      text-align: center;
+      font-weight: 300;
+      font-family: 'Montserrat', sans-serif;
+    }
+    #team h2 {
+      font-size: 2.2em;
+      margin-bottom: 1em;
+      text-shadow: 0 0 8px #bc65db;
+      font-weight: 700;
+    }
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3em;
+    }
+    .member {
+      background: #2e0057cc;
+      border-radius: 15px;
+      padding: 1.2em 1.5em;
+      box-shadow: 0 0 15px #bc65db88;
+      width: 200px;
+      transition: box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .member:hover {
+      box-shadow: 0 0 35px #d6a2e8cc;
+    }
+    .member h3 {
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 10px #d6a2e8;
+      color: #f0e6ff;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .member p {
+      font-size: 1em;
+      color: #cfc1ff;
+      text-shadow: 0 0 4px #ae6ee0bb;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .highlight {
+      background: #461e7c;
+      padding: 1em 1.5em;
+      border-radius: 12px;
+      margin-top: 2em;
+      font-weight: 700;
+      color: #f3e5ff;
+      text-shadow: 0 0 12px #d6a2e8;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Montserrat', sans-serif;
+    }
+    #contact {
+      max-width: 600px;
+      margin: 3em auto 4em;
+      background: #2e0057cc;
+      border-radius: 18px;
+      box-shadow: 0 0 30px #d6a2e888;
+      padding: 2.5em 3em;
+      color: #eee;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+    }
+    #contact h2 {
+      text-align: center;
+      margin-bottom: 2em;
+      color: #d6a2e8;
+      text-shadow: 0 0 10px #bc65db;
+      font-weight: 700;
+      font-size: 2em;
+    }
+    form {
+      display: grid;
+      gap: 1.3em;
+    }
+    input, textarea {
+      background: #27004a91;
+      border: 1.5px solid #ae6ee0;
+      border-radius: 12px;
+      padding: 0.9em 1.2em;
+      font-size: 1.1em;
+      color: #eee;
+      font-family: 'Montserrat', sans-serif;
+      box-shadow: 0 0 8px #d6a2e888 inset;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #b39ddb;
+      font-style: italic;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #f3e5ff;
+      box-shadow: 0 0 15px #ae6ee0;
+      background: #3a0462cc;
+    }
+    button {
+      background: #ae6ee0;
+      color: #120c2f;
+      border: none;
+      padding: 1em 0;
+      font-size: 1.2em;
+      font-weight: 700;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 25px #d6a2e8;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+    button:hover {
+      background: #c78cff;
+      box-shadow: 0 0 40px #f3e5ff, 0 0 60px #bc65db;
+    }
+    footer {
+      background: #2e0057;
+      color: #d6a2e8;
+      text-align: center;
+      padding: 1.8em 1em 1.2em 1em;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px #ae6ee0;
+      font-weight: 600;
+      font-size: 0.95em;
+      font-family: 'Montserrat', sans-serif;
+    }
+    footer .socials {
+      margin-bottom: 1em;
+    }
+    footer a {
+      margin: 0 0.7em;
+      color: #d6a2e8;
+      font-weight: 700;
+      text-shadow: 0 0 6px #bc65db;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #f3e5ff;
+      text-shadow: 0 0 14px #d6a2e8;
+    }
+    @media (max-width: 768px) {
+      .about, .benefits {
+        flex-direction: column;
+        text-align: center;
+      }
+      .services {
+        flex-direction: column;
+        gap: 1.5em;
+      }
+      .testimonial {
+        flex-direction: column;
+        text-align: center;
+      }
+      .team-members {
+        flex-direction: column;
+        gap: 2em;
+      }
+      header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+      }
+      nav ul {
+        flex-direction: row;
+        gap: 1.2em;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    @media (max-width: 520px) {
+      .hero h2 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      #contact {
+        padding: 2em 1.5em;
+      }
+    }
+  </style>
+<style type="text/css" id="operaUserStyle"></style></head>
+<body>
+  <header>
+    <h1>NINE</h1>
+    <nav>
+      <ul>
+        <li><a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#home">Home</a></li>
+        <li><a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#about">About Us</a></li>
+        <li><a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#services">Services</a></li>
+        <li><a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#benefits">Benefits</a></li>
+        <li><a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#team">Team</a></li>
+        <li><a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>AI WORLD</h2>
+    <p>Transforming possibilities with ethical, accessible, and powerful artificial intelligence for the entire world.</p>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <img src="./NINE_files/photo-1571171637578-41bc2dd41cd2" alt="Futuristic AI Team">
+      <div>
+        <h2>About Us � The Future in 2050</h2>
+        <p>Welcome to NINE, a pioneer shaping the AI-driven world of 2050. As we enter a new era of seamless human-machine integration, our mission is to build intelligent ecosystems that empower every individual � connecting minds, machines, and the environment in perfect harmony.</p>
+        <p>By 2050, nanotechnology interfaces will seamlessly link human cognition with vast artificial neural networks, unlocking unprecedented mental capacities and creativity. Our AI solutions harness quantum computing, predictive analytics, and real-time augmented reality to solve global challenges � from personalized health optimizations and climate solutions to digitized education accessible to all.</p>
+        <p>At NINE, we envision a future where privacy, ethics, and sustainability are core pillars of AI evolution, ensuring transformative technology enriches lives without compromise. Join us as we collaborate across dimensions � bridging virtual and physical realities � to shape a smarter, kinder, and more inclusive planet.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="./NINE_files/photo-1581090700227-30833d2e1f21" alt="AI Healthcare">
+        <h3>AI for Healthcare</h3>
+        <p>Advanced diagnostic tools and predictive models empowering healthcare providers worldwide to improve patient outcomes via personalized medicine, robotic surgery, and AI-powered clinical decision support.</p>
+      </div>
+      <div class="service-card">
+        <img src="./NINE_files/photo-1542831371-d531d36971e6" alt="Smart Education">
+        <h3>Smart Education Platforms</h3>
+        <p>Immersive AI-driven educational experiences that adapt in real time to students' unique learning styles through augmented and virtual reality, making knowledge universally accessible and deeply engaging.</p>
+      </div>
+      <div class="service-card">
+        <img src="./NINE_files/photo-1504384308090-c894fdcc538d" alt="Accessibility Tools">
+        <h3>Universal Accessibility Tools</h3>
+        <p>Innovative AI solutions breaking digital and physical barriers for people with disabilities, including brain-computer interfaces, real-time transcription, and intelligent assistive devices to promote inclusivity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <h2>Benefits of This AI App</h2>
+    <div class="benefits">
+      <img src="./NINE_files/photo-1518773553398-650c184e3f24" alt="Futuristic Brain Tech">
+      <div>
+        <p><strong>Enhanced Human Cognition:</strong> Our AI app leverages direct brain-cloud interfaces allowing users to expand mental capacity and cognition through seamless neural integration and real-time data access.</p>
+        <p><strong>Personalized Experience:</strong> Utilizing emotion recognition and advanced sensors, the AI adapts user experiences dynamically for maximum productivity and wellbeing.</p>
+        <p><strong>Global Connectivity &amp; Collaboration:</strong> Connect instantly across geographies in immersive virtual environments enabled by next-gen AI-driven mixed reality platforms facilitating real-time collaboration and innovation.</p>
+      </div>
+    </div>
+    <div class="benefits" style="margin-top: 2em;">
+      <img src="./NINE_files/photo-1581092918367-9ed89157e00c" alt="AI Sustainability">
+      <div>
+        <p><strong>Sustainability &amp; Efficiency:</strong> AI-powered resource optimization reduces wasted energy and materials, helping individuals and enterprises run sustainably in a carbon-neutral future.</p>
+        <p><strong>Safety &amp; Support:</strong> Integration with robotics enables AI to perform dangerous or repetitive tasks, supporting human workers and ensuring safer environments.</p>
+        <p><strong>Healthcare Revolution:</strong> Predictive analytics and personalized diagnostics empower early disease detection and superior health management globally, driving longer and healthier lives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <img src="./NINE_files/photo-1595152772835-219674b2a8a6" alt="Alex F.">
+      <div>
+        <p>"NINE�s AI diagnostic tools revolutionized our hospital�s capabilities, enabling real-time disease detection and personalized treatment that saved thousands of lives globally."</p>
+        <span>- Dr. Angela Wong, Chief Medical Officer, Unity Health</span>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="./NINE_files/photo-1531123897727-8f129e1688ce" alt="Priya S.">
+      <div>
+        <p>"The AI education platform transformed learning experiences, enabling immersive, personalized classes with real-time feedback�truly democratizing education worldwide."</p>
+        <span>- Priya S., Founder, EcoWave EduTech</span>
+      </div>
+    </div>
+    <div class="testimonial">
+      <img src="./NINE_files/photo-1544005313-94ddf0286df2" alt="Mohammed Iqbal">
+      <div>
+        <p>"Thanks to NINE�s accessibility solutions, our community gained unprecedented digital independence and confidence through brain-computer interfaces and AI-powered assistive devices."</p>
+        <span>- Mohammed Iqbal, Director, Access4All</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Meet the Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <h3>Kaviya</h3>
+        <p>CEO</p>
+      </div>
+      <div class="member">
+        <h3>Vincya</h3>
+        <p>Coordinator</p>
+      </div>
+      <div class="member">
+        <h3>Iffath</h3>
+        <p>Coordinator</p>
+      </div>
+      <div class="member">
+        <h3>Princy</h3>
+        <p>Coordinator</p>
+      </div>
+    </div>
+    <div class="highlight">
+      <p>This app is especially created by women, pioneering innovation and empowering the future through diversity and ingenuity.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <form>
+      <input type="text" name="name" value="NINE">
+      <input type="email" name="email" value="nineaiapp275@gmail.com">
+      <textarea name="message" rows="5">Get benefits by using our NINE AI</textarea>
+      <input type="tel" name="phone" value="8756134325">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#">Facebook</a> |
+      <a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#">Twitter</a> |
+      <a href="file:///C:/Users/ABCDEFGHI/Desktop/company.html#">LinkedIn</a>
+    </div>
+    <p>© 2025 NINE. All rights reserved.</p>
+  </footer>
+
+
+</body></html>
